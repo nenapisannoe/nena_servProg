@@ -1,0 +1,14 @@
+C:\Users\nena\source\repos\ServProg1\ServProg1\bin\Debug\net8.0\ServProg1.exe
+C:\Users\nena\source\repos\ServProg1\ServProg1\bin\Debug\net8.0\ServProg1.deps.json
+C:\Users\nena\source\repos\ServProg1\ServProg1\bin\Debug\net8.0\ServProg1.runtimeconfig.json
+C:\Users\nena\source\repos\ServProg1\ServProg1\bin\Debug\net8.0\ServProg1.dll
+C:\Users\nena\source\repos\ServProg1\ServProg1\bin\Debug\net8.0\ServProg1.pdb
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.AssemblyInfoInputs.cache
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.AssemblyInfo.cs
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.csproj.CoreCompileInputs.cache
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.dll
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\refint\ServProg1.dll
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.pdb
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ServProg1.genruntimeconfig.cache
+C:\Users\nena\source\repos\ServProg1\ServProg1\obj\Debug\net8.0\ref\ServProg1.dll
