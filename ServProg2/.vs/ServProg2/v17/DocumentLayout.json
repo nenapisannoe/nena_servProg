@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nena\\source\\repos\\ServProg2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{587C2086-C8E6-49CD-8C6D-EE1DA08991FE}|ServProg2\\ServProg2.csproj|c:\\users\\nena\\source\\repos\\servprog2\\servprog2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587C2086-C8E6-49CD-8C6D-EE1DA08991FE}|ServProg2\\ServProg2.csproj|solutionrelative:servprog2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nena\\source\\repos\\ServProg2\\ServProg2\\Program.cs",
+              "RelativeDocumentMoniker": "ServProg2\\Program.cs",
+              "ToolTip": "C:\\Users\\nena\\source\\repos\\ServProg2\\ServProg2\\Program.cs",
+              "RelativeToolTip": "ServProg2\\Program.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowD0AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T12:51:55.346Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 
-namespace ServProg1 
+namespace ServProg1
 {
-
     class SimpleHttpServer
     {
         private readonly string _rootDirectory;
@@ -19,22 +20,21 @@ namespace ServProg1
             }
         }
 
-        public void Run()
+        public async Task RunAsync()
         {
-            Console.WriteLine("Ожидаю запрос...");
+            Console.WriteLine("Ожидание запросов...");
 
             listener.Start();
 
-            while (true)
+            while (listener.IsListening)
             {
-
-                HttpListenerContext context = this.listener.GetContext();
-                Process(context);
-                
+                HttpListenerContext context = await listener.GetContextAsync();
+                Task.Run(() => ProcessAsync(context));
             }
+            listener.Close();
         }
 
-        void Process(HttpListenerContext context)
+        async Task ProcessAsync(HttpListenerContext context)
         {
             string requestPath = context.Request.Url.LocalPath;
             string filePath = Path.Combine(_rootDirectory, requestPath.TrimStart('/'));
@@ -46,19 +46,17 @@ namespace ServProg1
             {
                 byte[] buffer = File.ReadAllBytes(filePath);
                 response.StatusCode = (int)HttpStatusCode.OK;
-                response.OutputStream.Write(buffer, 0, buffer.Length);
+                await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
             }
             else
             {
-                response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                response.StatusCode = (int)HttpStatusCode.NotFound;
                 byte[] buffer = System.Text.Encoding.UTF8.GetBytes("404 - Кофейник не найден");
-                context.Response.OutputStream.Write(buffer, 0, buffer.Length);
+                await context.Response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
             }
 
-            
             LogRequest(context);
             context.Response.Close();
-
         }
 
         void LogRequest(HttpListenerContext context)
@@ -66,18 +64,17 @@ namespace ServProg1
             string logMessage = $"Дата обращения: {DateTime.Now}, IP клиента: {context.Request.RemoteEndPoint.Address}, путь обращения: {context.Request.Url.LocalPath}, код ответа: {context.Response.StatusCode}";
             File.AppendAllText("log.txt", logMessage + Environment.NewLine);
         }
-
     }
-    
+
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            string rootDirectory = @"C:\Users\nena\source\repos\ServProg1\ServProg1\content";
-            string[] prefixes = { "http://localhost:8080/" }; 
+            string rootDirectory = @"C:\Users\nena\source\repos\ServProg2\ServProg2\content";
+            string[] prefixes = { "http://localhost:8080/" };
 
             SimpleHttpServer server = new SimpleHttpServer(rootDirectory, prefixes);
-            server.Run();
+            await server.RunAsync();
         }
     }
 }

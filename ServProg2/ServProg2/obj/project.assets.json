@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\nena_servProg\\ServProg1\\ServProg1\\ServProg1.csproj",
-      "projectName": "ServProg1",
-      "projectPath": "E:\\nena_servProg\\ServProg1\\ServProg1\\ServProg1.csproj",
+      "projectUniqueName": "C:\\Users\\nena\\source\\repos\\ServProg2\\ServProg2\\ServProg2.csproj",
+      "projectName": "ServProg2",
+      "projectPath": "C:\\Users\\nena\\source\\repos\\ServProg2\\ServProg2\\ServProg2.csproj",
       "packagesPath": "C:\\Users\\nena\\.nuget\\packages\\",
-      "outputPath": "E:\\nena_servProg\\ServProg1\\ServProg1\\obj\\",
+      "outputPath": "C:\\Users\\nena\\source\\repos\\ServProg2\\ServProg2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nena\\AppData\\Roaming\\NuGet\\NuGet.Config",
