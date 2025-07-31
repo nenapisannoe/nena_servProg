@@ -1,0 +1,46 @@
+﻿@page
+@model Lab3.Pages.TestimonialsModel
+@{
+    ViewData["Title"] = "Testimonials";
+    ViewData["navbar-active"] = "testimonials";
+    ViewData["testimonials"] = "Our Clients";
+}
+
+<partial name="_Banner" />
+
+<div id="test-box" class="section wb">
+    <div class="container"> 
+        <div class="section-title text-center">
+            <h3>Testimonials</h3>
+            <p class="lead">
+                We thanks for all our awesome testimonials! There are hundreds of our happy customers!
+                <br>Let's see what others say about GoodWEB Solutions website template!
+            </p>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="testi-carousel owl-carousel owl-theme">
+                    @foreach (var testimonial in Model.Testimonials)
+                    {
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> @testimonial.Review</h3>
+                                <p class="lead">@testimonial.Comment</p>
+                            </div>
+                            <div class="testi-meta">
+                                <h4>@testimonial.Author</h4>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                    }
+                </div><!-- end carousel -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+
+
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<partial name="_Testimonials" />

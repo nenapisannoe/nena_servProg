@@ -1,0 +1,32 @@
+﻿@page
+@model Lab3.Pages.TestimonialsModel
+@{
+    ViewData["Title"] = "Testimonials";
+}
+
+<h2>Testimonials</h2>
+
+<form method="post">
+    <div>
+        <label for="Map">Map</label>
+        <input type="text" id="Map" name="Testimonial.Map" required />
+    </div>
+    <div>
+        <label for="Score">Score</label>
+        <input type="text" id="Score" name="Testimonial.Score" required />
+    </div>
+    <div>
+        <label for="POTG">POTG</label>
+        <input type="text" id="POTG" name="Testimonial.POTG" required />
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+@foreach (var testimonial in Model.Testimonials)
+{
+    <div class="testimonial">
+        <h3>@testimonial.Map</h3>
+        <p>@testimonial.Score</p>
+        <p>@testimonial.POTG</p>
+    </div>
+}

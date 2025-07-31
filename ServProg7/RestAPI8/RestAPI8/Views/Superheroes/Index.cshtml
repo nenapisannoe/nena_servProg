@@ -1,0 +1,95 @@
+@model IEnumerable<RestAPI8.Models.Superhero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperheroName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeightCm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeightKg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alignment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EyeColour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HairColour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Race)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SkinColour)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuperheroName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeightCm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightKg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alignment.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EyeColour.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HairColour.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Race.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SkinColour.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
